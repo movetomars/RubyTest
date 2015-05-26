@@ -6,7 +6,27 @@ def subtract(a, b)
     a - b
 end
 
-def sum(total)
-    total = Array.new
-    total.inject{|all, x| all + x}
+def sum(numbers)
+    sum = 0
+    numbers.each do |x|
+        sum += x
+    end
+    sum
+end
+
+def multiply(*args)
+     args.inject(:*)
+end
+
+def power(a, b)
+    a ** b
+end
+
+def factorial(x)
+    if(x < 1)
+        return 1
+    else
+        (1..x).inject{|product, x| product * x}
+    end
+    
 end
